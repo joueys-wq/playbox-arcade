@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Playbox Arcade</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E0C22'/%3E%3Ccircle cx='11' cy='11' r='4.5' fill='%23FFC93C'/%3E%3Ccircle cx='21' cy='11' r='4.5' fill='%23FF6257'/%3E%3Ccircle cx='11' cy='21' r='4.5' fill='%233DDBA9'/%3E%3Ccircle cx='21' cy='21' r='4.5' fill='%234FB0FF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Martian+Mono:wght@400;600&family=Onest:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page" id="page">
+
+  <main id="home">
+    <header class="masthead">
+      <p class="wordmark">Playbox</p>
+      <p class="freeplay"><span class="coin" aria-hidden="true"></span>Free play</p>
+      <button class="tool sound-toggle" id="sound-home" type="button" aria-pressed="true">Sound on</button>
+    </header>
+
+    <section class="hero">
+      <div class="pitch">
+        <h1>Twelve games.<br>No two alike.</h1>
+        <p class="lede">A gravity puzzle, a typing defence, a dice duel, a maze you light yourself, and eight more. Each one plays in a few minutes and runs right here in the page.</p>
+        <div class="pitch-actions">
+          <button class="btn" id="surprise" type="button">Surprise me</button>
+          <span class="hint">Esc pauses any game.</span>
+        </div>
+      </div>
+      <aside class="board" aria-labelledby="board-title">
+        <div class="board-head">
+          <h2 id="board-title">Hi-scores</h2>
+          <span>Saved in this browser</span>
+        </div>
+        <ol class="board-list" id="board-list"></ol>
+      </aside>
+    </section>
+
+    <h2 class="shelf-title">Pick a cabinet</h2>
+    <section class="shelf" id="shelf" aria-label="Games"></section>
+
+    <h2 class="shelf-title ledger-title">Your stat sheet</h2>
+    <p class="ledger-lede">Every game keeps its own numbers. They build up each time you play and are saved in this browser.</p>
+    <section class="ledger" id="ledger" aria-label="Statistics for each game"></section>
+
+    <footer class="foot">
+      <p>Every game works with a mouse or a keyboard, and most work by touch. Keystorm needs a real keyboard.</p>
+    </footer>
+  </main>
+
+  <section class="play" id="play" hidden>
+    <div class="playbar">
+      <button class="tool" id="back" type="button">&larr; All games</button>
+      <h1 class="play-title" id="play-title"></h1>
+      <div class="stats" id="stats"></div>
+      <div class="tools">
+        <button class="tool" id="stats-btn" type="button">Stats</button>
+        <button class="tool" id="restart" type="button">Restart</button>
+        <button class="tool" id="pause" type="button">Pause</button>
+        <button class="tool sound-toggle" id="sound-play" type="button" aria-pressed="true">Sound on</button>
+      </div>
+    </div>
+    <div class="stage-wrap" id="stage-wrap">
+      <div class="stage" id="stage"></div>
+      <div class="overlay" id="overlay" hidden></div>
+    </div>
+  </section>
+
+</div>
+
+<script src="js/arcade.js"></script>
+<script src="js/games/slingshot.js"></script>
+<script src="js/games/supernova.js"></script>
+<script src="js/games/keystorm.js"></script>
+<script src="js/games/corebreaker.js"></script>
+<script src="js/games/swarm.js"></script>
+<script src="js/games/laserlab.js"></script>
+<script src="js/games/skystack.js"></script>
+<script src="js/games/lasso.js"></script>
+<script src="js/games/constellation.js"></script>
+<script src="js/games/lantern.js"></script>
+<script src="js/games/hueshift.js"></script>
+<script src="js/games/knucklebones.js"></script>
+</body>
+</html>
